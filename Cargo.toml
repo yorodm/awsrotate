@@ -1,0 +1,22 @@
+[package]
+name = "awsrotate"
+version = "0.1.0"
+authors = ["Yoandy Rodriguez <yoandy.rmartinez@gmail.com>"]
+edition = '2018'
+homepage = "https://github.com/yorodm/awsrotate"
+repository = "https://github.com/yorodm/awsrotate"
+description = "Delete and backup AWS Cloudwatch logs"
+readme = "README.md"
+categories = ["command-line-utilities"]
+license-file="LICENSE.md"
+[badges]
+travis-ci = { repository = "yorodm/awstail", branch = "master" }
+[dependencies]
+rusoto_core = {version = "0.42.0", default_features = false, features=["rustls"]}
+rusoto_logs = {version = "0.42.0", default_features = false, features=["rustls"]}
+rusoto_credential ="0.42.0"
+clap = "2.32.0"
+chrono ="0.4.6"
+humantime = "1.1.1"
+console ="0.6.2"
+ctrlc = "3.1.3"
